@@ -1,0 +1,31 @@
+{
+  "name": "cpsc113-social-todo-node",
+  "version": "1.0.0",
+  "description": "my assignment for class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanyashi/tanya-cpsc113-social-todo-php"
+  },
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/tanyashi/tanya-cpsc113-social-todo-php/issues"
+  },
+  "homepage": "https://github.com/tanyashi/tanya-cpsc113-social-todo-php#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.2",
+    "connect-mongodb-session": "^1.1.0",
+    "express": "^4.13.4",
+    "express-handlebars": "^2.0.1",
+    "express-session": "^1.13.0",
+    "mongoose": "^4.3.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
+}

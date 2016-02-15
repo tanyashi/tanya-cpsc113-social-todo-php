@@ -1,0 +1,451 @@
+/**
+ * styles.css
+ *
+ * CPSC 113 Social To-Do
+ * Tanya Shi
+ *
+ * Global CSS.
+ */
+
+
+/* COLORS */
+
+.blue {
+    color: #488A99;
+}
+
+.charcoal {
+    color: #4B575C;
+}
+
+.gray {
+    color: #B4B4B4;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+.gold {
+    color: #DBAE58;
+}
+
+#top {
+    /* surround with whitespace */
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+#top .nav {
+    /* center navigation pills */
+    display: inline-block;
+}
+
+.navbar-default {
+    background-color: #3D3D3D;
+    border-color: #3D3D3D;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+.navbar-default .navbar-brand {
+    color: #ecf0f1;
+    float: left;
+    height: 10px;
+    line-height: 2px;
+    padding: 18px;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #ddae57;
+}
+
+.navbar-default .navbar-text {
+    color: #ecf0f1;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #ecf0f1;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+    font-size: 15px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #ddae57;
+    background-color: #747b7e;
+}
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ddae57;
+    background-color: #747b7e;
+}
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #ddae57;
+    background-color: #747b7e;
+}
+
+#middle .form-control {
+    /* center form controls */
+    display: inline-block;
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+.form-group {
+    margin: 10px 0px;
+}
+
+.container {
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.btn-custom {
+    padding: 4px 40px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 16px;
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: normal;
+}
+
+.bluebg {
+    background-color: #488A99;
+    border-color: #488A99;
+    color: #FFFFFF;
+}
+
+.charcoalbg {
+    background-color: #4B575C;
+    border-color: #4B575C;
+    color: #FFFFFF;
+}
+
+.graybg {
+    background-color: #B4B4B4;
+    border-color: #B4B4B4;
+}
+
+.whitebg {
+    background-color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.goldbg {
+    background-color: #DBAE58;
+    border-color: #DBAE58;
+    color: #FFFFFF;
+}
+
+.redbg {
+    background-color: #FF0000;
+    border-color: #FF0000;
+    color: #FFFFFF;
+}
+
+.greenbg {
+    background-color: #00FF00;
+    border-color: #00FF00;
+    color: #000000;
+}
+
+.offwhitebg {
+    background-color: #F2F2F2;
+}
+
+.mediumwidth {
+    width: 250px;
+    padding: 8px 0px;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+    background-color: #DBAE58;
+    border-color: #DBAE58;
+}
+
+panel {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 50px 0px;
+    background: #F2F2F2;
+}
+
+.leftalign {
+    text-align: left;
+    padding-left: 10em;
+}
+
+.rightalign {
+    text-align: right;
+    padding-left: 10em;
+}
+
+.content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cellbottom {
+    display: table-cell;
+    vertical-align: bottom;
+}
+
+panel.main {
+    background-position: center 0;
+    display: table;
+    height: 100%;
+    padding: 5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    position: static;
+    box-sizing: border-box;
+}
+
+.road {
+    background: url(/img/carpool.jpg) no-repeat top center;
+    background-size: 100% 125%;
+}
+
+.homebg {
+    background: url(/img/country_road.jpg) no-repeat top center;
+    background-size: 100% 100%;
+}
+
+panel.main .banner .tagline {
+    font-size: 3.5em;
+    line-height: 1em;
+    margin-top: 1.2em;
+    margin-bottom: 2em;
+    font-family: 'CenturyGothic', sans-serif;
+    font-weight: bold;
+}
+
+panel.main .banner .slogan {
+    line-height: 1.4em;
+    font-size: 1.5em;
+    font-family: 'Cambria', serif;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+.medium {
+    padding: 1.2em 4.5em;
+    margin-top: -1em;
+    margin-bottom: 3em;
+}
+
+.narrow {
+    padding: 0em 5em;
+    margin-top: -1em;
+    margin-bottom: 3em;
+}
+
+.narrow {
+    padding: 0em 5em;
+    margin-top: -1em;
+    margin-bottom: 3em;
+}
+
+.narrowtable {
+    padding: 4em 5em;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+panel.why .whys {
+    width: 100%;
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 2em;
+}
+
+.heightvh {
+    min-height: calc(100vh - 50px);
+    margin-bottom: -60px;
+}
+
+panel.why incell {
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+}
+
+panel.why .whyimg {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background: #F2F2F2 no-repeat center center;
+    background-size: 100%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.whiter {
+    background: #FFFFFF no-repeat center center;
+}
+
+panel.why .whyimg1 {
+    background-image: url(/img/HIW1.png);
+}
+
+panel.why .whyimg2 {
+    background-image: url(/img/HIW2.png);
+}
+
+panel.why .whyimg3 {
+    background-image: url(/img/HIW3.png);
+}
+
+panel.why .benimg1 {
+    background-image: url(/img/benefit1.png);
+}
+
+panel.why .benimg2 {
+    background-image: url(/img/benefit2.png);
+}
+
+panel.why .benimg3 {
+    background-image: url(/img/benefit3.png);
+}
+
+panel.why .whyroll {
+    width: 100%;
+    height: 100%;
+    background: rgba(30, 80, 95, 0.8);
+    display: table;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+    border-radius: 50%;
+    font-size: 1em;
+}
+
+panel.why .whyroll:hover {
+    opacity: 1;
+}
+
+panel.why .whyroll .cell {
+    padding: 20px;
+}
+
+panel.why .whytext {
+    color: #4B575C;
+    line-height: 1.2em;
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 0em;
+    font-family: 'CenturyGothic', sans-serif;
+    font-weight: bold;
+}
+
+headline {
+    display: block;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+    color: #488A99;
+    font-family: 'CenturyGothic', sans-serif;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+logo {
+    display: block;
+    font-size: 1.6em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: #488A99;
+    font-family: 'CenturyGothic', sans-serif;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.headline {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+}
+
+headline.small {
+    font-size: 2em;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    margin: 0;
+    display: block;
+    text-align: center;
+}
+
+subheadline {
+    display: block;
+    font-size: 1.2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: normal;
+}
+
+form {
+    max-width: 20%;
+    margin: 10px auto;
+}
+
+.fullwidth {
+    max-width: 100%;
+}
+
+.success,
+.error {
+    text-align: center;
+    display: block;
+    margin: 20px 0;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.success {
+    border: 2px solid #00B233;
+    color: #00B233;
+}
+
+.error {
+    border: 2px solid #FF1919;
+    color: #FF1919;
+}
+
+#bottom {
+    /* shrink bottom's font size */
+    font-size: 12px;
+    /* footer bar */
+    padding: 20px;
+    margin: 0px;
+    background: #B4B4B4;
+    color: #4B575C;
+    position: static;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 60px;
+    width: 100%;
+}

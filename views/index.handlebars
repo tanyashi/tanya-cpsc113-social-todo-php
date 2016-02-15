@@ -1,0 +1,98 @@
+<body>
+    <h1 align="center">Social To-Do App</h1>
+    
+    {{#if errors}}
+    <div style="color:red" class="validation-error">
+        {{errors}}
+    </div>
+    {{/if}}
+    
+    {{#if currentUser}}
+        <div class="container">
+            <div class="row text-center">
+                <h3>Welcome, {{currentUser.name}}</h3>
+            </div>
+            <div class="row">
+                <h4>Your Tasks</h4>
+                {{#if tasks}}
+                    <ul>
+                    {{#each tasks}}
+                            {{#if this.isComplete}}
+                            <li class="tasks-list-item complete-task">
+                            <div>
+                                <span class="task-title"><s>{{this.title}}</s></span><br>
+                                <span class="task-description" style="color:grey"><s>{{this.description}}</s></span><br>
+                                <form method="POST" action="/task/complete">
+                                    <input name="_id" type="hidden" value={{_id}}>
+                                    <input type="submit" name="toggle-task" class="toggle-task" value="Mark incomplete">
+                                </form>
+                            </div>
+                            {{else}}
+                            <li class="tasks-list-item">
+                            <div>
+                                <span class="task-title">{{this.title}}</span><br>
+                                <span class="task-description" style="color:grey">{{this.description}}</span><br>
+                                <form method="POST" action="/task/complete">
+                                    <input name="_id" type="hidden" value={{_id}}>
+                                    <input type="submit" name="toggle-task" class="toggle-task" value="Mark complete">
+                                </form>
+                            </div>
+                            {{/if}}
+                            {{#ifCond this.owner ../currentUser._id}}
+                                <form method="POST" action="/task/delete">
+                                    <input name="_id" type="hidden" value={{_id}}>
+                                    <input type="submit" name="delete-task" class="delete-task" value="Delete">
+                                </form>
+                            {{/ifCond}}
+                        </li>
+                    {{/each}}
+                    </ul>
+                {{else}}
+                    No tasks to show!
+                {{/if}}
+            </div>
+        </div>
+            
+        <hr>
+        
+        <div class="container">
+            <div class="row">
+                <h4>Add a new task</h4>
+                <form action="/task/create" method="POST">
+                    <label for="title">Task title</label>
+                    <input name="title" type="text"><br>
+                    <label for="description">Task Description</label>
+                    <input name="description" type="text"><br>
+                    <h5>Collaborators</h5>
+                    <input name="collaborator1" type="email"><br>
+                    <input name="collaborator2" type="email"><br>
+                    <input name="collaborator3" type="email"><br><br>
+                    <input type="submit" class="create-task-submit">
+                </form>
+            </div>
+        </div>
+        
+    {{else}}
+        <div class="container text-center">
+            <h4>Log In</h4>
+            <form class="login-form" action="/user/login" method="POST">
+                <input name="email" id="email" type="text" placeholder="email"><br>
+                <input name="password" id="password" type="password" placeholder="password"><br><br>
+                <input type="submit"  class="log-in-submit">
+            </form>
+        </div>
+        
+        <div><hr></div>
+        
+        <div class="container text-center">
+            <h4>Create an Account</h4>
+            <form action="/user/register" method="post" class="signup-form">
+              <input name="fl_name" type="text" class="text-input" placeholder="first &amp; last name"><br>
+              <input name="email" type="email" class="text-input" placeholder="email"><br>
+              <input name="password" type="password" class="text-input" placeholder="password"><br>
+              <input name="password_confirmation" type="password" class="text-input" placeholder="password confirmation"><br><br>
+              <input class="sign-up-submit" type="submit">
+            </form>
+        </div>
+    {{/if}}
+</body>
