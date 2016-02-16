@@ -19,18 +19,13 @@
         $rows = mysqli_fetch_assoc($rows);
 
         // if we found user, check password
-        if (count($rows) == 1)
+        if (count($rows) != 0)
         {
-            // first (and only) row
-            $row = $rows[0];
-
             // compare hash of user's input against hash that's in database
-            if (password_verify($_POST["password"], $row["password"]))
+            if (password_verify($_POST["password"], $rows["password"]))
             {
                 // remember that user's now logged in by storing user's ID in session
-                $_SESSION["id"] = $row["id"];
-                
-                apologize("Success.");
+                $_SESSION["id"] = $rows["id"];
                 
                 // redirect to user home
                 redirect("home.php");
