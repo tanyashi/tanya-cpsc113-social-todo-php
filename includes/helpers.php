@@ -77,6 +77,17 @@
     }
 
     /**
+     * Return multiple rows from mysql query
+     */
+    function resultToArray($result) {
+        $rows = array();
+        while($row = mysqli_fetch_assoc($result)) {
+            $rows[] = $row;
+        }
+        return $rows;
+    }
+    
+    /**
      * Renders view, passing in values.
      */
     function render($view, $values = [])

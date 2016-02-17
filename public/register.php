@@ -23,13 +23,10 @@
         // add user to database
         $query = "INSERT IGNORE INTO users (name, email, password) VALUES('".$_POST['name']."', '".$_POST['email']."', '".password_hash($_POST['password'], PASSWORD_DEFAULT)."')";
         $result = mysqli_query($connection, $query);
-        //$result = mysqli_fetch_assoc($result);
         
-        //$result = mysqli::query("INSERT IGNORE INTO users (name, email, hash) VALUES(?, ?, ?)", $_POST["name"], $_POST["email"], password_hash($_POST["password"], PASSWORD_DEFAULT));
-       
         $rows = mysqli_query($connection, "SELECT LAST_INSERT_ID() AS id");
         $rows = mysqli_fetch_assoc($rows);
-        $id = $rows[0]["id"];
+        $id = $rows["id"];
         
         // log user in
         $_SESSION["id"] = $id;

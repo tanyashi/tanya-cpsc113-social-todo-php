@@ -3,10 +3,10 @@
     // configuration
     require("../includes/config.php"); 
     
-    // if already logged in, render user homepage
+    // if already logged in, redirect to home
     if (!empty($_SESSION["id"]))
     {
-        render("home_user.php");
+        redirect("home.php");
     }
 
     // else render homepage

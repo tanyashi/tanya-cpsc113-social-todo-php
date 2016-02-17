@@ -107,6 +107,15 @@
     margin: 10px 0px;
 }
 
+label {
+    color: #488A99;
+    font-weight: bold;
+    display: block;
+    width: 150px;
+    float: left;
+}
+label:after { content: ": " }
+
 .container {
     /* center contents */
     margin-left: auto;
@@ -115,23 +124,21 @@
 }
 
 .btn-custom {
-    padding: 4px 40px;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 16px;
+    padding: 6px 6px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 14px;
     font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
     font-weight: normal;
+    border-radius: 5px;
+    border: 2px solid;
+    background-color: #C8C8C8;
+    border-color: #C8C8C8;
 }
 
 .bluebg {
     background-color: #488A99;
     border-color: #488A99;
-    color: #FFFFFF;
-}
-
-.charcoalbg {
-    background-color: #4B575C;
-    border-color: #4B575C;
     color: #FFFFFF;
 }
 
@@ -149,22 +156,6 @@
     background-color: #DBAE58;
     border-color: #DBAE58;
     color: #FFFFFF;
-}
-
-.redbg {
-    background-color: #FF0000;
-    border-color: #FF0000;
-    color: #FFFFFF;
-}
-
-.greenbg {
-    background-color: #00FF00;
-    border-color: #00FF00;
-    color: #000000;
-}
-
-.offwhitebg {
-    background-color: #F2F2F2;
 }
 
 .mediumwidth {
@@ -386,6 +377,15 @@ logo {
 .headline {
     font-size: 1.5em;
     margin-bottom: 2em;
+}
+
+.welcome {
+    font-size: 3em;
+    margin-bottom: 1em;
+    color: #488A99;
+    font-family: 'CenturyGothic', sans-serif;
+    font-weight: bolder;
+    line-height: 1em;
 }
 
 headline.small {

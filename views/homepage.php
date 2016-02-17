@@ -1,7 +1,7 @@
 <body>
     <panel class="why heightvh">
         <div class="content">
-            <div class="headline blue">WELCOME.</div>
+            <div class="welcome blue">WELCOME.</div>
             <div class="slogan blue medium">This Social To-Do App is the best way to organize and 
             complete your projects in collaboration with your friends.</div>
             <div id="register">
