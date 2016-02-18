@@ -37,9 +37,9 @@
         <div class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-default">
-                    <a href="/public/home.php"><logo>Social To Do App</logo></a>
+                    <logo>Social To Do App</logo></a>
                 </div>
-                <a href="logout.php">Logout</a>
+                <a href="logout.php" class="logout">Logout</a>
             </div>
         </div>
         

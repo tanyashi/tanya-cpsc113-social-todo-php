@@ -175,7 +175,7 @@ panel {
     display: block;
     width: 100%;
     text-align: center;
-    padding: 50px 0px;
+    padding: 10px 0px;
     background: #F2F2F2;
 }
 
@@ -215,15 +215,6 @@ panel.main {
     box-sizing: border-box;
 }
 
-.road {
-    background: url(/img/carpool.jpg) no-repeat top center;
-    background-size: 100% 125%;
-}
-
-.homebg {
-    background: url(/img/country_road.jpg) no-repeat top center;
-    background-size: 100% 100%;
-}
 
 panel.main .banner .tagline {
     font-size: 3.5em;
@@ -365,7 +356,7 @@ headline {
 
 logo {
     display: block;
-    font-size: 1.6em;
+    font-size: 2em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
     color: #488A99;
@@ -382,6 +373,7 @@ logo {
 .welcome {
     font-size: 3em;
     margin-bottom: 1em;
+    margin-top: 1em;
     color: #488A99;
     font-family: 'CenturyGothic', sans-serif;
     font-weight: bolder;

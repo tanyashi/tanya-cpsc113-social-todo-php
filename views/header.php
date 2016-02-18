@@ -10,9 +10,9 @@
         <link href="/css/styles.css" rel="stylesheet"/>
 
         <?php if (isset($title)): ?>
-            <title>Social To Do: <?= htmlspecialchars($title) ?></title>
+            <title>CPSC113 Todo: <?= htmlspecialchars($title) ?></title>
         <?php else: ?>
-            <title>Social To Do</title>
+            <title>CPSC113 Todo</title>
         <?php endif ?>
 
         <!-- https://jquery.com/ -->
@@ -37,8 +37,9 @@
         <div class="navbar navbar-default">
             <div class="container">
                 <div class="navbar-default">
-                    <a href="/public/index.php"><logo>Social To Do App</logo></a>
+                    <logo>Social To Do App</logo></a>
                 </div>
+                <a href="logout.php" class="logout">Logout</a>
             </div>
         </div>
         
