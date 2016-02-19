@@ -203,6 +203,15 @@ panel {
     margin: 0 auto;
 }
 
+.validation-error {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    background: #F2F2F2;
+    color: red;
+}
+
 panel.main {
     background-position: center 0;
     display: table;

@@ -141,7 +141,10 @@
         if (isset($_POST["create-task-submit"]))
         {
             // validate entries
-            if (strlen($_POST["title"]) == 0 || strlen($_POST["description"]) == 0) {
+            if (strlen($_POST["title"]) == 0 || strlen($_POST["title"]) > 500) {
+                redirect("index.php");
+            }
+            if (strlen($_POST["description"]) >= 5000) {
                 redirect("index.php");
             }
             

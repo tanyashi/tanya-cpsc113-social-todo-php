@@ -39,6 +39,7 @@
                     <logo>Social To Do App</logo></a>
                 </div>
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="editpw.php">Edit Password</a></li>
                     <li><a href="logout.php" class="logout">Logout</a></li>
                 </ul>
             </div>

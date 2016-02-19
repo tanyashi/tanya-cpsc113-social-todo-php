@@ -1,10 +1,10 @@
+<?php if ($errors): ?> 
+    <div class="validation-error">
+        <?php echo $errors ?>
+    </div>
+<?php endif; ?>
+
 <?php if (empty($_SESSION["id"])): ?> 
-    <panel>
-        <?php if ($errors): ?> 
-            <div style="color:red" class="validation-error"><?php echo $errors ?></div>
-        <?php endif; ?>
-    </panel>
-    
     <panel>
         <div class="content">
             <headline>Log In</headline>
@@ -54,12 +54,6 @@
     </panel>
 
 <?php else : ?>  
-    <?php if ($errors): ?> 
-        <div style="color:red" class="validation-error">
-            <?php echo $errors ?>
-        </div>
-    <?php endif; ?>
-    
     <panel>
         <div class="content">
             <h3>Welcome, <?php echo $name ?></h3> <br>
