@@ -22,26 +22,27 @@
         <script src="/js/bootstrap.min.js"></script>
         
         <!-- Form Validation -->
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/css/formValidation.min.css">
-        <script src="//code.jquery.com/jquery-2.1.3.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/js/formValidation.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/js/framework/bootstrap.min.js"></script>
+        <!--<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/css/formValidation.min.css">-->
+        <!--<script src="//code.jquery.com/jquery-2.1.3.js"></script>-->
+        <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/js/formValidation.min.js"></script>-->
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/formvalidation/0.6.1/js/framework/bootstrap.min.js"></script>-->
 
-        <link rel="shortcut icon" href="/img/favicon.ico">
     
     </head>
 
     <body>
 
-        <div class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-default">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
                     <logo>Social To Do App</logo></a>
                 </div>
-                <a href="logout.php" class="logout">Logout</a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="logout.php" class="logout">Logout</a></li>
+                </ul>
             </div>
-        </div>
+        </nav>
         
         <div id="middle">
 

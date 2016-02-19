@@ -41,6 +41,15 @@
     display: inline-block;
 }
 
+.navbar-header {
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    padding-top: 1.2em;
+}
+
 .navbar-default {
     background-color: #3D3D3D;
     border-color: #3D3D3D;
@@ -194,16 +203,6 @@ panel {
     margin: 0 auto;
 }
 
-.cell {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.cellbottom {
-    display: table-cell;
-    vertical-align: bottom;
-}
-
 panel.main {
     background-position: center 0;
     display: table;
@@ -214,7 +213,6 @@ panel.main {
     position: static;
     box-sizing: border-box;
 }
-
 
 panel.main .banner .tagline {
     font-size: 3.5em;
@@ -239,111 +237,6 @@ panel.main .banner .slogan {
     margin-bottom: 3em;
 }
 
-.narrow {
-    padding: 0em 5em;
-    margin-top: -1em;
-    margin-bottom: 3em;
-}
-
-.narrow {
-    padding: 0em 5em;
-    margin-top: -1em;
-    margin-bottom: 3em;
-}
-
-.narrowtable {
-    padding: 4em 5em;
-    margin-top: 0em;
-    margin-bottom: 0em;
-}
-
-panel.why .whys {
-    width: 100%;
-    text-align: center;
-    margin-top: 4em;
-    margin-bottom: 2em;
-}
-
-.heightvh {
-    min-height: calc(100vh - 50px);
-    margin-bottom: -60px;
-}
-
-panel.why incell {
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-}
-
-panel.why .whyimg {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
-    background: #F2F2F2 no-repeat center center;
-    background-size: 100%;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 0px;
-}
-
-.whiter {
-    background: #FFFFFF no-repeat center center;
-}
-
-panel.why .whyimg1 {
-    background-image: url(/img/HIW1.png);
-}
-
-panel.why .whyimg2 {
-    background-image: url(/img/HIW2.png);
-}
-
-panel.why .whyimg3 {
-    background-image: url(/img/HIW3.png);
-}
-
-panel.why .benimg1 {
-    background-image: url(/img/benefit1.png);
-}
-
-panel.why .benimg2 {
-    background-image: url(/img/benefit2.png);
-}
-
-panel.why .benimg3 {
-    background-image: url(/img/benefit3.png);
-}
-
-panel.why .whyroll {
-    width: 100%;
-    height: 100%;
-    background: rgba(30, 80, 95, 0.8);
-    display: table;
-    color: #fff;
-    opacity: 0;
-    transition: all 0.1s ease-in-out;
-    border-radius: 50%;
-    font-size: 1em;
-}
-
-panel.why .whyroll:hover {
-    opacity: 1;
-}
-
-panel.why .whyroll .cell {
-    padding: 20px;
-}
-
-panel.why .whytext {
-    color: #4B575C;
-    line-height: 1.2em;
-    font-size: 1.2em;
-    margin-top: 2em;
-    margin-bottom: 0em;
-    font-family: 'CenturyGothic', sans-serif;
-    font-weight: bold;
-}
-
 headline {
     display: block;
     font-size: 2em;
@@ -355,14 +248,10 @@ headline {
 }
 
 logo {
-    display: block;
     font-size: 2em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
     color: #488A99;
     font-family: 'CenturyGothic', sans-serif;
     font-weight: bold;
-    line-height: 1em;
 }
 
 .headline {
@@ -405,25 +294,6 @@ form {
 
 .fullwidth {
     max-width: 100%;
-}
-
-.success,
-.error {
-    text-align: center;
-    display: block;
-    margin: 20px 0;
-    padding: 20px;
-    text-transform: uppercase;
-}
-
-.success {
-    border: 2px solid #00B233;
-    color: #00B233;
-}
-
-.error {
-    border: 2px solid #FF1919;
-    color: #FF1919;
 }
 
 #bottom {

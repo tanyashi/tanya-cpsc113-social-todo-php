@@ -1,11 +1,7 @@
-<body>
 <?php if (empty($_SESSION["id"])): ?> 
     <panel>
-        <div class="welcome blue">WELCOME.</div>
         <?php if ($errors): ?> 
-            <div style="color:red" class="validation-error">
-                <?php echo $errors ?>
-            </div>
+            <div style="color:red" class="validation-error"><?php echo $errors ?></div>
         <?php endif; ?>
     </panel>
     
@@ -13,7 +9,6 @@
         <div class="content">
             <headline>Log In</headline>
             </br>
-            <span id="login-error" class="validation-error"></span>
             <form action="index.php" method="post" id="login" class="login">
                 <fieldset>
                     <div class="form-group">
@@ -35,7 +30,7 @@
         <div class="content">
             <headline>Create an Account</headline>
             </br>
-            <form action="index.php" method="post" id="registration" class="register">
+            <form action="index.php" method="post" id="register" class="register">
                 <fieldset>
                     <div class="form-group">
                         <input autocomplete="off" autofocus class="form-control" name="fl_name" placeholder="Name" type="text"/>
@@ -65,15 +60,15 @@
         </div>
     <?php endif; ?>
     
-    <div class="container">
-        <div class="row text-center">
-            <h3>Welcome, <?php echo $name ?></h3>
+    <panel>
+        <div class="content">
+            <h3>Welcome, <?php echo $name ?></h3> <br>
         </div>
-        <div class="row">
+        <div class="content">
             <h4>Your Tasks</h4>
             <?php if (sizeof($rows) > 0): ?>
                 <ul>
-                <form action="home.php" method="post" name="update-tasks">
+                <form action="index.php" method="post" name="update-tasks">
                     <?php foreach ($rows as $row): ?> 
                         <?php if ($row["is_complete"] == 1): ?>
                             <li class="tasks-list-item complete-task">
@@ -101,14 +96,12 @@
                 <h5>No tasks to show!</h5>
             <?php endif; ?>
         </div>
-    </div>
+    </panel>
     
-    <hr>
-    
-    <div class="container">
-        <div class="row">
+    <panel class="container whitebg">
+        <div class="content">
             <h4>Add a new task</h4>
-            <form action="home.php" method="POST" class="create-task" id="create-task">
+            <form action="index.php" method="POST" class="create-task" id="create-task">
                 <label for="title">Task title</label>
                 <div class="col-sm-10">
                     <input type="text" class="form-control" id="title" name="title">
@@ -132,10 +125,11 @@
                 </div>
             </form>
         </div>
-    </div>
+    </panel>
 <?php endif; ?>
 </body>
 
+<!--
 <script>
     $(document).ready(function() {
         $('#login').formValidation({
@@ -166,7 +160,7 @@
         });
     });
     $(document).ready(function() {
-        $('#registration').formValidation({
+        $('#register').formValidation({
             framework: 'bootstrap',
             icon: {
                 valid: 'glyphicon glyphicon-ok',
@@ -242,3 +236,5 @@
         });
     });
 </script>
+-->
+
