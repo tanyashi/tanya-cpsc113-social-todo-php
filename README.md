@@ -3,9 +3,8 @@
 This application allows users to create tasks, add collaborators, and mark them as
 complete. It was built using a stack comprising of PHP, Bootstrap, and MySQL. 
 
+The additional feature I added was the ability for users to change their password after logging in. 
+
 ## How to run this
 
-You can run the server with 
-
-    nodemon index.js
-    SESSION_SECRET='' MONGO_URL="mongodb://localhost:27017/social-todo" ./node_modules/.bin/nodemon index.js
+Visit https://social-todo-2-tanyashi.c9users.io/public/index.php.
